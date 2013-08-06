@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Do not use this HTML file as a start -->
+  <!-- Always create your own HTML file and follow steps in basic usage section of documentation -->
+  <!-- Sorry D, I'm lazy! -->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+
+    <title> Full Width Slider | Testing </title>
+
+    <meta content="Test of touch-enabled image gallery and content slider plugin, that focuses on providing great user experience on every desktop and mobile device." name="description">
+    <meta name="keywords" content="content slider, gallery, plugin, jquery, banner rotator">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta name="author" content="Dmitry Semenov, + me">
+
+    <!-- slider JS files -->
+    
+    <script class="rs-file" src="../assets/royalslider/jquery-1.8.3.min.js"></script>
+    <script class="rs-file" src="../assets/royalslider/jquery.royalslider.min.js"></script>
+    <link class="rs-file" href="../assets/royalslider/royalslider.css" rel="stylesheet">
+    
+    
+
+    
+    <!-- syntax highlighter -->
+    <script src="../assets/preview-assets/js/highlight.pack.js"></script>
+    <script src="../assets/preview-assets/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script> hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    <!-- preview-related stylesheets -->
+    <link href="../assets/preview-assets/css/reset.css" rel="stylesheet">
+    <link href="../assets/preview-assets/css/smoothness/jquery-ui-1.8.22.custom.css" rel="stylesheet">
+    <link href="../assets/preview-assets/css/github.css" rel="stylesheet">
+
+    <!-- slider stylesheets -->
+    
+     
+        <link class="rs-file" href="../assets/royalslider/skins/minimal-white/rs-minimal-white.css" rel="stylesheet">
+     
+    
+
+    
+    <!-- slider css -->
+    <style>
+      #full-width-slider {
+  width: 100%;
+  color: #000;
+}
+.coloredBlock {
+  padding: 12px;
+  background: rgba(255,0,0,0.6);
+  color: #FFF;
+   width: 200px;
+   left: 20%;
+   top: 5%;
+}
+.infoBlock {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  left: auto;
+  max-width: 25%;
+  padding-bottom: 0;
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  padding: 20px;
+}
+.infoBlockLeftBlack {
+  color: #FFF;
+  background: #000;
+  background: rgba(0,0,0,0.75);
+  left: 30px;
+  right: auto;
+}
+.infoBlock h4 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  padding-bottom: 3px;
+}
+.infoBlock p {
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+.infoBlock a {
+  color: #FFF;
+  text-decoration: underline;
+}
+.photosBy {
+  position: absolute;
+  line-height: 24px;
+  font-size: 12px;
+  background: #FFF;
+  color: #000;
+  padding: 0px 10px;
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  top: auto;
+  border-radius: 2px;
+  z-index: 25; 
+} 
+.photosBy a {
+  color: #000;
+}
+.fullWidth {
+  max-width: 1400px;
+  margin: 0 auto 24px;
+}
+
+@media screen and (min-width:960px) and (min-height:660px) {
+  .heroSlider .rsOverflow,
+  .royalSlider.heroSlider {
+      height: 520px !important;
+  }
+}
+
+@media screen and (min-width:960px) and (min-height:1000px) {
+    .heroSlider .rsOverflow,
+    .royalSlider.heroSlider {
+        height: 660px !important;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .royalSlider.heroSlider,
+  .royalSlider.heroSlider .rsOverflow {
+    height: 300px !important;
+  }
+  .infoBlock {
+    padding: 10px;
+    height: auto;
+    max-height: 100%;
+    min-width: 40%;
+    left: 5px;
+    top: 5px;
+    right: auto;
+    font-size: 12px;
+  }
+  .infoBlock h3 {
+     font-size: 14px;
+     line-height: 17px;
+  }
+}
+
+    </style>
+    
+    <style>
+      #page-navigation { display: none; }
+    </style>
+  </head>
+  <body>
+  <header  id="main-header" class="clearfix">  
+    <div  class="page wrapper"> 
+       <div class="col span_6">
+         <a id="logo" href="#">LippeMFG</a>
+         <nav>
+            <a href="/about">about</a>
+            <a href="/contact">contact</a>
+         </nav>
+       </div>
+    </div>
+  </header>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+<head>
+  <title>3 Column CSS Demo - Equal Height Columns with Cross-Browser CSS</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+  <meta name="description" content="3 Column CSS Demo - Equal Height Columns with Cross-Browser CSS" />
+  <meta name="keywords" content="3 Column CSS Demo - Equal Height Columns with Cross-Browser CSS" />
+  <meta name="robots" content="index, follow" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <style media="screen" type="text/css">
+/* <!-- */
+
+/* Start of Column CSS */
+#container3 {
+  clear:left;
+  float:left;
+  width:100%;
+  overflow:hidden;
+  background-image: url('http://farm1.staticflickr.com/97/205364633_db5b075435_o.jpg');
+/*  background:#89ffa2; /* column 3 background colour */
+}
+#container2 {
+  clear:left;
+  float:left;
+  width:100%;
+  position:relative;
+  right:33.333%;
+  background-image: url('http://farm1.staticflickr.com/97/205364633_db5b075435_o.jpg');
+  /*  background:#ffa7a7; /* column 2 background colour */
+}
+#container1 {
+  float:left;
+  width:100%;
+  position:relative;
+  right:33.33%;
+  background-image: url('http://farm1.staticflickr.com/97/205364633_db5b075435_o.jpg');
+/*  background:#fff689; /* column 1 background colour */
+}
+#col1 {
+  float:left;
+  width:29.33%;
+  position:relative;
+  left:68.67%;
+  overflow:hidden;
+}
+#col2 {
+  float:left;
+  width:29.33%;
+  position:relative;
+  left:72.67%;
+  overflow:hidden;
+}
+#col3 {
+  float:left;
+  width:29.33%;
+  position:relative;
+  left:76.67%;
+  overflow:hidden;
+}
+
+/* Borrowed header css */
+#main-header {
+  color: #000;
+  background: #f7f7f7;
+  margin-bottom: 16px;
+}
+
+#main-header nav {
+  margin-top: 13px;
+  float: left;
+  margin-left: 16px;
+}
+
+#main-header nav a {
+  padding: 14px 10px;
+  position: relative;
+}
+
+#main-header nav a.curr-menu-item {
+  color: #AAA;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.span_6 {
+    margin-left:0;
+    width:100%;
+}
+
+    #main-header .span_6 {
+      margin-bottom: 12px;
+    }
+
+
+    </style>
+</head>
+<div id="active3">
+
+<div id="container3">
+  <div id="container2">
+    <div id="container1">
+      <div id="col1">
+        <!-- Column one start -->
+        <h2>Equal height columns</h2>
+        <p>It does not matter how much content is in each column, the background colours will always stretch down to the height of the tallest column.</p>
+        <h2>3 Column Dimensions</h2>
+        <p>Each column is 33.33% percent wide with 2 percent padding on each side.</p>
+        <h2>No CSS hacks</h2>
+        <p>The CSS used for this 3 column layout is 100% valid and hack free. To overcome Internet Explorer's broken box model, no horizontal padding or margins are used. Instead, this design uses percentage widths and clever relative positioning.</p>
+        <h2>No JavaScript</h2>
+        <p>JavaScript is not required. Some website layouts rely on JavaScript hacks to resize divs and force elements into place but you won't see any of that nonsense here.</p>
+        <!-- Column one end -->
+      </div>
+      <div id="col2">
+        <!-- Column two start -->
+        <h2>No Images</h2>
+        <p>This three column layout requires no images. Many CSS website designs need images to colour in the column backgrounds but that is not necessary with this design. Why waste bandwidth and precious HTTP requests when you can do everything in pure CSS and HTML?</p>
+        <h2>Valid XHTML strict markup</h2>
+        <p>The HTML in this layout validates as XHTML 1.0 strict.</p>
+        <h2>This layout is FREE for anyone to use</h2>
+        <p>You don't have to pay anything. Simply view the source of this page and save the HTML onto your computer. My only suggestion is to put the CSS into a separate file. If you are feeling generous however, link back to this page so other people can find and use this layout too.</p>
+        <!-- Column two end -->
+      </div>
+      <div id="col3">
+        <!-- Column three start -->
+        <h2>Cross-Browser Compatible</h2>
+        <p>This 3 column layout has been tested on the following browsers:</p>
+        <h3>iPhone &amp; iPod Touch</h3>
+        <ul>
+          <li>Safari</li>
+        </ul>
+        <h3>Mac</h3>
+        <ul>
+          <li>Safari</li>
+          <li>Firefox</li>
+          <li>Opera 9</li>
+          <li>Netscape 7 &amp; 9</li>
+        </ul>
+        <h3>Windows</h3>
+        <ul>
+          <li>Firefox 1.5, 2 &amp; 3</li>
+          <li>Safari</li>
+          <li>Opera 8 &amp; 9</li>
+          <li>Explorer 5.5, 6 &amp; 7</li>
+          <li>Google Chrome</li>
+          <li>Netscape 8</li>
+        </ul>
+        <!-- Column three end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  
+  </div>
+    <footer class="row clearfix" id="main-footer">
+    <div class="col span_6">
+      <nav><a href="http://dimsemenov.com/subscribe.html?s=sb">Footer menu item 1</a><a href="http://twitter.com/dimsemenov">Footer menu item 2</a><a href="mailto:diiiimaaaa@gmail.com?subject=RoyalSlider bug">Footer menu item 3</a><a href="http://dimsemenov.com/plugins/royal-slider/support/">Footer menu item 4</a></nav>
+      <p class="copy">© 20xx-20xx <a href="http://lippemfg.org/copy-right">Moi</a></p>
+    </div>
+  </footer>
+
+  </body>
+</html>
