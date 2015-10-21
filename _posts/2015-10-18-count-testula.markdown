@@ -3,6 +3,11 @@ published: true
 title: Count testula
 layout: post
 ---
-Bwah ha ha
+I have no theme! Sad.
 
-![](http://myers.io/images/bio-photo.jpg)
+Here's a picture.
+
+* list item
+* list item
+
+![](http://placehold.it/350x150)
